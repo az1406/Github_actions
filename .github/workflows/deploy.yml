@@ -31,6 +31,6 @@ jobs:
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
             cd /home/ubuntu/example
-            docker compose pull
-            docker compose up -d
-            docker compose exec -T nginx nginx -s reload
+            sudo docker compose pull
+            sudo docker compose up -d
+            sudo docker compose exec -T nginx nginx -s reload
